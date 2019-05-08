@@ -3,6 +3,7 @@ import App from "./index.vue";
 import store from "@/store";
 import "@/common";
 import "@/utils";
+import 'reset-css';
 
 new Vue({
   store,
