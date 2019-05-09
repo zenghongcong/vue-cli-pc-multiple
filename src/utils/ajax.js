@@ -2,6 +2,7 @@ import axios from "axios";
 import store from "@/store";
 import Qs from "qs";
 import md5 from "md5";
+import { Message } from "element-ui";
 
 let axiosConfig = axios.create({
   baseURL: process.globalConfig.baseUrl,
@@ -25,11 +26,13 @@ axiosConfig.interceptors.request.use(
 axiosConfig.interceptors.response.use(
   response => {
     if (response.data.code != "0000") {
+      Message.error(response.data.msg);
       return Promise.reject(response.data);
     }
     return response.data;
   },
   error => {
+    Message.error(error.message);
     return Promise.reject(error);
   }
 );
