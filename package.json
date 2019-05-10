@@ -13,6 +13,7 @@
     "compression-webpack-plugin": "^2.0.0",
     "core-js": "^2.6.5",
     "element-ui": "^2.8.2",
+    "image-webpack-loader": "^4.6.0",
     "md5": "^2.2.1",
     "reset-css": "^4.0.1",
     "stylus": "^0.54.5",
